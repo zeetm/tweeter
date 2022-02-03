@@ -1,12 +1,36 @@
-#logo {
+#inlogo {
   font-family: Bungee, sans-serif
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+#arrowdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 nav {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
 height: 120px;
 background-color: #4056A1;
 color: #FFFFFF;
 font-family: Bungee;
 padding-left: 1.5em;
 padding-right: 1.5em;
+
+
 }
