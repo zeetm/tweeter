@@ -1,0 +1,30 @@
+/* Overall New Tweet section/area */
+section.new-tweet {
+  position: absolute;
+  width: 100%;
+}
+
+/* Text/typing area */
+textarea {
+  background-color:  #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  border-style: none;
+  border-bottom-style: solid;
+  border-width: thick;
+  color: #44423b;
+}
+
+/* Tweet button */
+button {
+  background-color: #435cac;
+  font-family: 'Bungee', sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+/* Counter */
+output.counter {
+  font-family: 'Bungee', sans-serif;
+  color: #46433c;
+  float: right;
+} 
