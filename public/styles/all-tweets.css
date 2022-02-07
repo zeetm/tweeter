@@ -49,6 +49,9 @@ article.tweet footer {
   margin: 15px;
  }
 
+ article.tweet:hover footer p {
+  color: #050504;
+ }
  article.tweet footer h4 {
   font-size: 15px;
   color:#5e5a51;
