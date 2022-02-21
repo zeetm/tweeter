@@ -55,36 +55,35 @@
     </div>
   </nav>
 
-    <!--Header-->
-    <header>
-
-    <aside>
-      <div class="profile">
-        <img class="avatar" src="/images/profile-hex.png">
+    <!--Header and profile pic-->
+    <header class="profile">
+      <div>
+          <img src="images/profile-hex.png"> 
       </div>
       <br>
-      <div class="name">
-        <h2><span class="first-name">Amy</span> Mansell</h2>
+      <div>
+          <h2>Amy Mansell</h2>
       </div>
-    </aside>
-    
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
 
     <main class="container">
-      <!-- Error container for validation error messages -->
-      <section class="error-container"><i class="fas fa-exclamation-triangle"></i></i>
-        <h4></h4> <i class="fas fa-exclamation-triangle"></i></i>
-      </section>
-      <!-- New tweet input box -->
-      <section class="newtweet">
-        <form method="post" action="/tweets" class="newtweet__form">
-          <textarea class="form__textarea" name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet" class="form__input">
-          <span class="form__counter">140</span>
-        </form>
-      </section>
+
+    <!-- Compose tweet section -->
+    <section class="new-tweet">
+      
+        <h2>Compose Tweet</h2>
+
+      <form method="post" action="/tweets" class="newtweet-area">
+        <textarea class="text-area" name="text" placeholder="What are you humming about?"></textarea>
+        
+        <div>
+          <button type="submit" class ="button">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
 
       <!-- ALL TWEETS SECTION -->
 
