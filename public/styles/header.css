@@ -1,4 +1,35 @@
-body > header {
+.profile {
+	position: relative;
+	padding: 12px;
+	height: 80%;
+}
+
+.name {
+	text-align: center;
+	width: 100%;
+	margin-top: -40px;
+}
+
+.name h2 {
+	margin: 0;
+	font-weight: 300;
+	color: #fff;
+}
+
+.first-name {
+	font-weight: 600;
+}
+
+.avatar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 2%;
+}
+
+
+header {
   height: 400px;
   width: 100%;
   justify-content: center;
@@ -7,14 +38,4 @@ body > header {
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
 
-body > header img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-body > header h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
