@@ -1,4 +1,4 @@
-header {
+body > header {
   height: 400px;
   width: 100%;
   justify-content: center;
@@ -7,13 +7,13 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
 
-header img {
+body > header img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-header h2 {
+body > header h2 {
   display: flex;
   align-items: center;
   justify-content: center;

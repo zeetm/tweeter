@@ -1,36 +1,51 @@
-#inlogo {
-  font-family: Bungee, sans-serif
-}
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-}
-
-#arrowdown {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 nav {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-height: 120px;
-background-color: #4056A1;
-color: #FFFFFF;
-font-family: Bungee;
-padding-left: 1.5em;
-padding-right: 1.5em;
-position: relative;
-z-index: 1
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 120px;
+	background: #4056a1;
+	padding: 1.5em 1.5em;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	float: left;
+	margin-left: 10px;
+	font-size: 1.5em;
+	font-family: "Bungee", cursive;
+	color: #fff;
+}
+
+.nav-text {
+	position: fixed;
+	top: 1.5em;
+	right: 2.5em;
+	cursor: pointer;
+	color: #fff;
+	float: right;
+	text-decoration: none;
+}
+
+.arrow {
+	text-align: center;
+	cursor: pointer;
+	font-size: 22px;
+	line-height: 20px;
+	font-weight: 300;
+}
+
+.write {
+	font-weight: 600;
+}
+
+.icon {
+	font-size: 1em;
+	color: #f13c20;
+	margin-top: 0.2em;
+	animation: float 2s infinite ease;
 }
