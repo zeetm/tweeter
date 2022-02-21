@@ -73,17 +73,18 @@
     <!-- Page-specific (main) content here -->
 
     <main class="container">
-      <section class="new-tweet">
-        <h3>Compose Tweet</h3>
-        <form>
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+      <!-- Error container for validation error messages -->
+      <section class="error-container"><i class="fas fa-exclamation-triangle"></i></i>
+        <h4></h4> <i class="fas fa-exclamation-triangle"></i></i>
+      </section>
+      <!-- New tweet input box -->
+      <section class="newtweet">
+        <form method="post" action="/tweets" class="newtweet__form">
+          <textarea class="form__textarea" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet" class="form__input">
+          <span class="form__counter">140</span>
         </form>
-      </section>  
+      </section>
 
       <!-- ALL TWEETS SECTION -->
 
