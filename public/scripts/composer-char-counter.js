@@ -1,21 +1,38 @@
 $(document).ready(function() {
-  // --- our code goes here ---
-  const $textArea = $('.new-tweet textarea');
+  $("#textInput").on("keyup", function(event) {
+    const tweetLength = $(this).val().length;
+    const max = 140;
+    const remainingChar = max - tweetLength;
 
-  // updates the character counter every time text is inputted
-  $textArea.on('keyup', function() {
+    if (remainingChar < 0) {
+      $("#counter")
+        .text(remainingChar)
+        .addClass("over");
 
-    const $charCounter = $(this).siblings('.counter');
-    const remainingCharCount = 140 - $(this).val().length;
+      $("#charactersAlert")
+      .addClass("over");
+      
+      $('.references')
+      .addClass("over")
+      
+      $("#validInput")
+      .removeClass('alert')
 
-    $charCounter.text(remainingCharCount);
-
-    // makes character counter red if over character limit
-    if (remainingCharCount < 0) {
-      $charCounter.addClass('over-char-limit');
 
     } else {
-      $charCounter.removeClass('over-char-limit');
+      $("#counter")
+      .text(remainingChar)
+      .removeClass("over");
+
+      $("#validInput")
+      .removeClass('alert')
+
+      $("#charactersAlert")
+      .removeClass("over");
+        
+      $('.references')
+      .removeClass("over")
+      
     }
   });
 });
