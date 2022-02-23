@@ -30,7 +30,7 @@ body {
   width: 90%;
   background-color: #f4f1ec;
   align-items: center;
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   margin: auto;
