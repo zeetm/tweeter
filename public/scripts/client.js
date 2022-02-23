@@ -41,9 +41,13 @@ const $tweet = function createTweetElement(tweetData) {
 
 }
 
-// Test / driver code (temporary)
-console.log($tweet); // to see what it looks like
-$('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
+const renderTweets = function(tweets) {
+for (let index = 0; index < tweets.length; index++) { 
+let tweet = tweets[index]; // loops through tweets
+$("#tweets-container").prepend(createTweetElement(tweet)); // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+}
+}
 
-
+renderTweets(data);
