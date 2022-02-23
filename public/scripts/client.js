@@ -57,6 +57,23 @@ $(document).ready(function() {
     });
   });
 
+  $form.on("submit", function(event) {
+
+    event.preventDefault();
+    const inputText = $('#textInput').val();
+    
+    if (!inputText) { 
+      alert('empty');
+    } else if(inputText.length > 140) {
+      alert('too long');
+    } else {
+      $.post("/tweets", $form.serialize())
+      .done(function(data) {
+        loadtweets();
+        $("#textInput").val('').empty();
+      });
+    }
+  });
 
   function loadtweets() {
     $.get("/tweets")
