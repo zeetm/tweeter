@@ -51,3 +51,28 @@ $("#tweets-container").prepend(createTweetElement(tweet)); // calls createTweetE
 }
 
 renderTweets(data);
+
+
+$(document).ready(function() {
+  
+  const $form = $("#createTweet");
+
+  $(".new-tweet").hide();
+  
+  $("#writeTweet").click(function() {
+    $(".new-tweet").slideToggle( "slow", function() { //text area to be hid
+    $("#textInput").focus()
+    });
+  });
+
+
+  function loadtweets() {
+    $.get("/tweets")
+    .then(function(data) {
+      renderTweets(data);
+    });
+  }
+
+  loadtweets();
+
+});
