@@ -25,7 +25,7 @@ const $tweet = function createTweetElement(tweetData) {
         <h4>${tweetObj.user.name}</h4>
         <p>${tweetObj.user.handle}</p>
     </header>
-    <p>${escape(tweetObj.content.text)}</p>
+    <p>${tweetObj.content.text}</p>
     <footer>
       <p>10 days ago</p>
       <i class="fa-solid fa-flag"></i>
