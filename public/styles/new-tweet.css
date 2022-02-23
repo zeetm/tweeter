@@ -43,3 +43,23 @@
 	font-weight: 600;
 	font-size: 25px;
 }
+
+.counter.over {
+  color: red;
+}
+#charactersAlert.over {
+  color: red;
+  border: red 3px solid;
+}
+#charactersAlert{
+  color: transparent;
+  border-color: transparent;
+}
+#validInput{
+  color: transparent;
+  border-color: transparent;
+}
+#validInput.alert{
+  color: red;
+  border: red 3px solid;
+}
