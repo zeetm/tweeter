@@ -36,12 +36,12 @@ function createTweetElement(tweet) {
 }
 
 
-const renderTweets = function(tweets) {
-for (let index = 0; index < tweets.length; index++) { 
-let tweet = tweets[index]; // loops through tweets
-$("#tweets-container").prepend(createTweetElement(tweet)); // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
-}
+//renderTweets
+function renderTweets(tweets) {
+  $("#tweets-container").replaceWith("<section id='tweets-container'/>"); 
+  tweets.forEach( tweet => {
+    $("#tweets-container").prepend(createTweetElement(tweet));
+  })
 }
 
 renderTweets(data);
