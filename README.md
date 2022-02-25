@@ -12,9 +12,12 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-##Screenshots
+## Screenshots
 
+Overview of app
 !["Screenshot overview of app](https://github.com/zeetm/tweeter-1/blob/master/docs/header-nav.png?raw=true)
+
+Compose new tweet
 !["Screenshot of compose tweet box](https://github.com/zeetm/tweeter-1/blob/master/docs/new-tweet.png?raw=true)
 
 
