@@ -10,41 +10,36 @@ const escape =  function(str) {
 }
 
 function createTweetElement(tweet) {
-  let tweetBody = $(`
-  <section class="all-tweets">
-  <article class="tweet">
-    <header>
-        <img src=${escape(tweet.user.avatars)}>
-        <h4>${escape(tweet.user.name)}</h4>
-        <p>${escape(tweet.user.handle)}</p>
-    </header>
-    <p>${escape(tweet.content.text)}</p>
-    <footer>
-      <p>${escape(tweet.created_at)}</p>
-      <i class="fa-solid fa-flag"></i>
-      <i class="fa-solid fa-retweet"></i>
-      <i class="fa-solid fa-heart"></i>
-
-    </footer>
-  </article>
-</section>
-  `);
+  let tweetBody = 
+  `<header>
+    <div class="nameImg">
+    <img src="${escape(tweet.user.avatars)}" alt="" />
+    <div class="name">${escape(tweet.user.name)}</div>
+    </div>
+    <div class="userName">${escape(tweet.user.handle)}</div>
+  </header>
+  <p>${escape(tweet.content.text)}</p>
+  <footer>
+    <div class="daysAgo">${escape(tweet.created_at)}</div>
+    <div class="references">
+    <i class="far fa-flag" id=flag>    </i> 
+     <i class="fas fa-retweet" id=retweet> </i>
+    <i class="fas fa-heart" id=heart></i>
+    </div>
+  </footer>`;
 
   return $("<article>")
     .addClass("tweet")
     .append(tweetBody);
 }
-
-
 //renderTweets
+
 function renderTweets(tweets) {
-  $("#tweets-container").replaceWith("<section id='tweets-container'/>"); 
+  $("#tweets-container").replaceWith("<section id='tweets-container'/>");
   tweets.forEach( tweet => {
     $("#tweets-container").prepend(createTweetElement(tweet));
   })
 }
-
-renderTweets(data);
 
 
 $(document).ready(function() {
@@ -65,9 +60,9 @@ $(document).ready(function() {
     const inputText = $('#textInput').val();
     
     if (!inputText) { 
-      alert('empty');
+      alert('empty string');
     } else if(inputText.length > 140) {
-      alert('too long');
+      alert('too long string');
     } else {
       $.post("/tweets", $form.serialize())
       .done(function(data) {
@@ -87,3 +82,5 @@ $(document).ready(function() {
   loadtweets();
 
 });
+
+

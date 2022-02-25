@@ -56,10 +56,15 @@
   <nav>
     <span class="logo">tweeter</span>
     <div class="right-side">
+      <!--Go to top-->
+  
+      <button onclick="topFunction()" id="myBtn" title="Go to top">    
+      <i class="fas fa-angle-double-up"></i></button>
+
+      <!-- Compose new tweet button -->
       <a href="#" class="nav-text arrow" title="Compose Tweet">
-        <!-- Compose new tweet button -->
-        <span class="write">Write</span> a new tweet
-        <br>
+        <span  id="writeTweet" class='order' >Write</span> a new tweet
+        <br/>
         <i class="icon fas fa-angle-double-down"></i>
       </a>
     </div>
@@ -99,10 +104,29 @@
 
       <!-- ALL TWEETS SECTION -->
 
-      <section id="tweets-container"/>
+      <section id="tweets-container">
 
-      <!-- ALL TWEETS SECTION -->
-
+      </section>
     </main>
   </body>
+
+      <!--Top Scroll-->
+      <script>
+        const mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
 </html>

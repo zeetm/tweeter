@@ -49,3 +49,7 @@ nav {
 	margin-top: 0.2em;
 	animation: float 2s infinite ease;
 }
+
+.order {
+	font-weight: 600;
+}

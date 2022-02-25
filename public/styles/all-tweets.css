@@ -76,3 +76,15 @@ article.tweet:hover p {
 article.tweet:hover footer p {
   color: #282723;
  }
+
+/* icon hover*/
+
+#flag:hover {
+  background-color: red;
+}
+#retweet:hover {
+  background-color: red;
+}
+#heart:hover {
+  background-color: red;
+}
