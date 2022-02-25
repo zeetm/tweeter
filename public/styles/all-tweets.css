@@ -3,7 +3,7 @@ article.tweet {
   height: 250px;
   border-style: solid;
   border-width: thick;
-  color: #44423b;
+  color: #3f3e38;
   margin-top: 40px;
   margin-bottom: 45px;
  }
@@ -12,6 +12,7 @@ article.tweet {
   display: flex;
   flex-direction: row;
   height: 100px;
+  
  }
 
  article.tweet header img { 
@@ -38,53 +39,75 @@ article.tweet footer {
   height: 70px;
   border-top-style: solid;
   border-width: thick;
-  color:#42403a;
+  color:#3f3e39;
   margin-right: 15px;
   margin-left: 15px;
  }
 
  article.tweet footer p {
-  color:#5f5c53;
+  color:#5e5b54;
   font-size: 20px;
   margin: 15px;
  }
 
  article.tweet footer h4 {
   font-size: 15px;
-  color:#5e5a51;
+  color:#5e5b53;
   margin: 15px;
  } 
 
- /* hover stlying*/
+ /* hover stlying */
 
  article.tweet:hover {
-  box-shadow: 5px 5px 0 #C8C8C8;
+  box-shadow: 10px 10px 0 #C8C8C8;
  }
 
  article.tweet:hover header h4 {
-  color: #282723;
+  color: #252522;
 }
 
 article.tweet:hover header p {
-  color:#C8C8C8;
+  color:#c8c8c8f3;
 }
 
 article.tweet:hover p {
-  color: #282723;
+  color: #252522;
 }
 
 article.tweet:hover footer p {
-  color: #282723;
+  color: #292825;
  }
 
-/* icon hover*/
+/* icons*/
+
+#flag{
+  text-align: right;
+  color: #384c8f;
+}
+#retweet{
+  text-align: right;
+
+  color: #384c8f
+}
+#heart{
+  text-align: right;
+
+  color: #384c8f
+}
+
+/* hover icons*/
 
 #flag:hover {
-  background-color: red;
+  text-align: right;
+  color: red;
 }
 #retweet:hover {
-  background-color: red;
+  text-align: right;
+
+  color: red
 }
 #heart:hover {
-  background-color: red;
+  text-align: right;
+
+  color: red;
 }

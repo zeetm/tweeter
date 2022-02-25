@@ -3,7 +3,7 @@
   font-family: Bungee, sans-serif;
   color: #545149;
   float: right;
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 /* Tweet button */
@@ -18,9 +18,10 @@
 
 .newtweet-area {
 	width: 100%;
-	padding: 10px;
+  height: 100%;
+	padding: 20px;
 	background: #f4f1ec;
-	margin: 50px 0px;
+	margin: auto
 }
 
 .text-area {
