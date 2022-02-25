@@ -3,23 +3,24 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Test / driver code (temporary). Eventually will get this from the server.
-const tweetData = {
-
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
 
-const $tweet = function createTweetElement(tweetData) {
-  const $tweet = $(`
+function createTweetElement(tweet) {
+  let tweetBody = $(`
   <section class="all-tweets">
   <article class="tweet">
     <header>
-        <img src=${tweetObj.user.avatars}>
-        <h4>${tweetObj.user.name}</h4>
-        <p>${tweetObj.user.handle}</p>
+        <img src=${escape(tweet.user.avatars)}>
+        <h4>${escape(tweet.user.name)}</h4>
+        <p>${escape(tweet.user.handle)}</p>
     </header>
-    <p>${tweetObj.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
-      <p>10 days ago</p>
+      <p>${escape(tweet.created_at)}</p>
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
       <i class="fa-solid fa-heart"></i>
@@ -29,8 +30,9 @@ const $tweet = function createTweetElement(tweetData) {
 </section>
   `);
 
-  return $tweet
-
+  return $("<article>")
+    .addClass("tweet")
+    .append(tweetBody);
 }
 
 
