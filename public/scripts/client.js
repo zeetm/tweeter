@@ -55,7 +55,7 @@ $(document).ready(function() {
   });
 
   $form.on("submit", function(event) {
-
+console.log('here')
     event.preventDefault();
     const inputText = $('#textInput').val();
     
@@ -83,4 +83,27 @@ $(document).ready(function() {
 
 });
 
+const formatTime = milliseconds => {
+  const hour = 1000 * 60 * 60;
+  const day = hour * 24;
+  const month = day * 30;
+  const year = month * 12;
+  const hoursAway = Math.floor((Date.now() - milliseconds) / hour);
+  const daysAway = Math.floor((Date.now() - milliseconds) / day);
+  const monthsAway = Math.floor((Date.now() - milliseconds) / month);
+  const yearsAway = Math.floor((Date.now() - milliseconds) / year);
+  if (Date.now() === milliseconds) {
+    return "Just now";
+  } else if (yearsAway > 0) {
+    return `${yearsAway} years ago`; // years away
+  } else if (monthsAway > 0) {
+    return `${monthsAway} months ago`; // months away
+  } else if (daysAway > 0) {
+    return `${$daysAway} days ago`; // days away
+  } else if (hoursAway > 0) {
+    return `${hoursAway} hours ago`; //hours away
+  } else {
+    return "Recently";
+  }
+};
 
