@@ -12,7 +12,18 @@ article.tweet {
   display: flex;
   flex-direction: row;
   height: 100px;
-  
+  justify-content: space-between;
+ }
+
+ article.tweet .userName {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+ }
+
+ article.tweet .name {
+  display: flex;
+  align-items: center;
  }
 
  article.tweet header img { 
@@ -24,16 +35,20 @@ article.tweet header p {
   margin: 30px;
   font-size: 25px;
   color:#dddada;
+
 }
 
 
 article.tweet p {
-  margin-bottom: 30px;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  margin-left: 15px;
+
 }
 
 article.tweet footer {
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
   height: 70px;
@@ -42,6 +57,10 @@ article.tweet footer {
   color:#3f3e39;
   margin-right: 15px;
   margin-left: 15px;
+ }
+
+ article.tweet .nameImg {
+  display: flex;
  }
 
  article.tweet footer p {

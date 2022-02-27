@@ -20,7 +20,7 @@ function createTweetElement(tweet) {
   </header>
   <p>${escape(tweet.content.text)}</p>
   <footer>
-    <div class="daysAgo">${escape(tweet.created_at)}</div>
+    <div class="daysAgo">${escape(formatTime(tweet.created_at))}</div>
     <div class="references">
     <i class="far fa-flag" id=flag>    </i> 
      <i class="fas fa-retweet" id=retweet> </i>
@@ -99,7 +99,7 @@ const formatTime = milliseconds => {
   } else if (monthsAway > 0) {
     return `${monthsAway} months ago`; // months away
   } else if (daysAway > 0) {
-    return `${$daysAway} days ago`; // days away
+    return `${daysAway} days ago`; // days away
   } else if (hoursAway > 0) {
     return `${hoursAway} hours ago`; //hours away
   } else {
